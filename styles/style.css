@@ -1,0 +1,38 @@
+/* font */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&family=Work+Sans:wght@700&display=swap');
+/* common style */
+body {
+    background: #F3F1FF;
+    font-family: 'Open Sans', sans-serif;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    background: #ffffff;
+    width: 870px;
+    padding: 30px;
+    border-radius: 5px;
+}
+/* top players style */
+.player-tittle {
+    color: #562EFF;
+    font-size: 24px;
+}
+.players {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+}
+.player {
+    display: flex;
+    align-items: center;
+}
+.player img {
+    width: 56px;
+    height: 56px;
+}
+.player-name {
+    margin-left: 16px;
+}
