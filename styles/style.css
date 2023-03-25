@@ -7,23 +7,34 @@ body {
 }
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container {
     background: #ffffff;
     width: 870px;
     padding: 30px;
+    margin-top: 21px;
     border-radius: 5px;
 }
+hr {
+    border: 1px solid #D1D1D1;
+    margin-bottom: 27px;
+}
 /* top players style */
-.player-tittle {
+.top-players {
+    margin-bottom: 30px;
+}
+.section-tittle {
     color: #562EFF;
     font-size: 24px;
+    margin-top: 3px;
 }
 .players {
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 29px;
 }
 .player {
     display: flex;
@@ -35,4 +46,110 @@ main {
 }
 .player-name {
     margin-left: 16px;
+    font-size: 18px;
+}
+/*-------------------- top blogs --------------------------------*/
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+.blog {
+    display: flex;
+}
+.blog .thumble img {
+    width: 177px;
+    height: 117px;
+}
+.blog-info {
+    margin-left: 16px;
+}
+.info-title {
+    font-size: 20px;
+}
+.blog-author {
+    color: #9F9F9F;
+}
+.blog-author a {
+    text-decoration: none;
+}
+
+/*--------------------------- course section --------------------------*/
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course {
+    background: #FFFFFF;
+    width: 252px;
+    box-shadow: (0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+}
+.course .course-banner img {
+    width: 224px;
+    height: 104px;
+}
+.course-detles a {
+    text-decoration: none;
+    color: #ED6B4F;
+}
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star {
+    font-size: 12px;
+}
+.fa-star.firld {
+    color: #FFC014;
+}
+.fa-star.another {
+    color: #AEAEAE;
+}
+.duration {
+    background: #FFE4E8;
+    color: #FF4A60;
+    padding: 5px;
+    border-radius: 14px;
+}
+
+
+
+/*------------------------------------- media quary ------------------------------------------*/
+
+/*--------------------------------- 
+mobile device
+----------------------------------*/
+@media all and (max-width:688px){
+    .container {
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player {
+        flex-direction: column;
+    }
+}
+
+/*------------
+ ipad device
+------------ */
+@media all and (min-width: 669px) and (max-width: 992px){
+    .container {
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog, .course {
+        flex-direction: column;
+    }
+    .blog {
+        align-items: center;
+    }
 }
